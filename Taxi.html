@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <title>Complaints</title>
+    </head>
+    
+    <link type="text/css" rel="style.css">
+    <style>
+        td{
+            font-size: large;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        button{
+            height: 40px;
+            width: 90px;
+            font-size: larger;
+        }
+        
+    </style>
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $('#headbar').load('Try.html');
+        });
+    </script>
+</head>
+<body style="background-image: url(Bg.jpg);background-attachment: fixed;background-size: cover;">
+  <div id="headbar"></div>
+  <div style="float: left;height: auto;width: 100%;background-color: rgb(28, 44, 44);color: brown;">
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="http://localhost/Surya/WaterBill.php">Water Bill</a>
+      <a href="http://localhost/Surya/CurrentBill.php">Electricity Bill</a>
+      <a href="http://localhost/Surya/Taxi.php">Book Taxi</a>
+      <a href="http://localhost/Surya/BookRest.php">Book Restaurant</a>
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Book Taxi</span>
+    
+  </div>
+  <script src="script.js"></script>
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+    <div style="width: 100%;">
+      <div style="float: right;width: 15%;height: 100%; text-align: center;background-color: aqua;">
+          <h1 style="writing-mode: vertical-rl; padding: 50px;height: 85%;">Services</h1>
+      </div>
+      <div style="float: left;width: 85%;">
+        <form method="post" action="CurrentBill.php">
+            <fieldset style="height: auto;width: 30%;margin: 0 auto;text-align: center; padding: 150px; background-color: rgb(172, 240, 172);opacity: 90%;">
+                <table cellspacing="15px">
+                    <tr>
+                        <td>Apartment No</td>
+                        <td>:</td>
+                        <td><input type="text" name="ApNo" required placeholder="Apartment No"></td>
+                    </tr>
+                    <!-- <tr>
+                        <td>State</td>
+                        <td>:</td>
+                        <td><input type="text" name="St" readonly value="Andhra Pradesh"></td>
+                    </tr> -->
+                    <tr>
+                        <td>Mobile No</td>
+                        <td>:</td>
+                        <td><input type="text" name="MobNo" required placeholder="Mobile No"></td>
+                    </tr>
+                    <!-- <tr>
+                        <td>Service Provider</td>
+                        <td>:</td>
+                        <td><select style="border-radius: 12px;">
+                            <option name="APCPDCL">Central Power Distribution</option>
+                            <option name="APEPDCL" selected>Estern Power Dirtribution</option>
+                            <option name="APSPDCL">Southern Power Distribution</option>
+                        </select>
+                        </td>
+                    </tr> -->
+                    <tr>
+                        <td>Booking Date</td>
+                        <td>:</td>
+                        <td><input type="date" name="Date" required placeholder="Booking date"></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td>:</td>
+                        <td><input type="password" name="Pass" required placeholder="Password"></td>
+                    </tr>
+                    <tr>
+                        <td>Booking Charges</td>
+                        <td>:</td>
+                        <td><input type="number" name="Amt" value="100" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>Card No</td>
+                        <td>:</td>
+                        <td><input type="number" name="CDNo" required placeholder="Credit/Debit Card No"></td>
+                    </tr>
+                    <tr>
+                        <td>CVV</td>
+                        <td>:</td>
+                        <td><input type="password" name="CVV" required placeholder="Enter CVV" onchange="OTP()"></td>
+                    </tr>
+                    <tr>
+                        <td>OTP</td>
+                        <td>:</td>
+                        <td><input type="text" id="Otp" name="Otp" value="" required readonly placeholder="OTP"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td><input type="password" name="Status" id="Status" value="" required hidden></td>
+                    </tr>
+                    <tr>
+                        <th><button type="submit" style="color: blue;background-color: black;">Proceed</button></th>
+                        <td></td>
+                        <th><button type="reset" style="color: red;background-color: black;">Cancel</button></th>
+                    </tr>
+                </table>
+
+            </fieldset>
+
+        </form>
+
+      </div>
+      
+    </div>
+      </body>
+      </html>

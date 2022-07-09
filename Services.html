@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Services</title>
+    </head>
+    
+    <link type="text/css" rel="style.css">
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function(){
+            $('#headbar').load('Try.html');
+        });
+    </script>
+    <style>
+      button{
+        background-color: black;
+        color: blue;
+        font-size: x-large;
+        width: 300px;
+        height: 70px;
+        
+      }
+      button:hover{
+        width: 300px;
+        height: 90px;
+        font-size: 250%;
+      }
+      th{
+        width: 350px;
+        height: 100px;
+      }
+      
+    </style>
+</head>
+<body style="background-image: url(http://localhost/Surya/Images/Services3.jpg);background-attachment: fixed;background-size: cover;">
+  <div id="headbar"></div>
+  <div style="float: left;height: auto;width: 100%;background-color: rgb(28, 44, 44);color: brown;">
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="http://localhost/Surya/WaterBill.php">Water Bill</a>
+      <a href="http://localhost/Surya/CurrentBill.php">Electricity Bill</a>
+      <a href="http://localhost/Surya/Taxi.php">Book Taxi</a>
+      <a href="http://localhost/Surya/BookRest.php">Book Restaurant</a>
+      <a href="http://localhost/Surya/MyPayments.html">MyPayments</a>
+    </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Services</span>
+    
+  </div>
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+    
+      <div style="float: right;width: 15%;height: 100%; text-align: center;background-color: aqua;">
+          <h1 style="writing-mode: vertical-rl; padding: 50px;height: 85%;">Services</h1>
+      </div>
+      <script src="script.js"></script><div style="width: 100%;height: 100%;">
+        <div style="float: right;">
+          <a href="http://localhost/Surya/MyPayments.html"><button>My Payments</button></a>
+          </div>
+      <table cellspacing="50px" >
+        <tr>
+          <th><a href="http://localhost/Surya/WaterBill.php"><button >Water Bill</button></a></th>
+          <th><a href="http://localhost/Surya/CurrentBill.php"><button>Electricity Bill</button></a></th>
+        </tr>
+        <tr>
+          <th><a href="http://localhost/Surya/Taxi.php"><button >Book Taxi</button></a></th>
+          <th><a href="http://localhost/Surya/BookRest.php"><button>Book Restaurant</button></a></th>
+        </tr>
+      </table>
+      </div>
+      
+
+      </body>
+      </html>

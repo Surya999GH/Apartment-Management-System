@@ -1,0 +1,169 @@
+<html>
+    <head><title>Registration</title>
+    <style>
+        input{
+            border-color: black;
+            border-radius: 40px;
+        }
+        button{
+            border-radius: 4px;
+        }
+    </style>
+    <script>
+		
+		// function getCalendar() {
+		// 	const year = document.getElementById("year").value;
+		// 	const month = document.getElementById("month").value;
+		// 	const date = new Date().getDate();
+
+		// 	const container = document.getElementById("container-div");
+
+		// 	let calendar = document.getElementById("calendar");
+		// 	if (calendar) {
+		// 		calendar.value = `${year}-${month}-${date}`;
+		// 	} else {
+		// 		calendar = document.createElement("input");
+		// 		calendar.type = "date";
+		// 		calendar.setAttribute("id", "calendar");
+		// 		calendar.value = `${year}-${month}-${date}`;
+		// 		container.appendChild(calendar);
+		// 	}return calender.value;
+        //     document.getElementById("cal").value=calendar;
+		// }
+        // function validfields()
+        // {
+        //     var valid=false;
+        //     var FirstName=document.forms["Reg"]["Fname"].value;
+        //     var LastName=document.forms["Reg"]["LName"].value;
+        //     var Calendar=document.getElementById("container-div").value;
+        //     document.write(Calendar);
+        //     var Email=document.forms["Reg"]["Email"].value;
+        //     var phoneNo=document.forms["Reg"]["Phone"].value;
+        //     var pass=document.forms["Reg"]["Pass"].value;
+        //     var Conpass=document.forms["Reg"]["CPass"].value;
+        //     var Fir_va=new RegExp("[a-z A-Z \.]{3,}","g");
+        //     var Las_va=new RegExp("[a-z A-Z \.]{1,}","g");
+        //     var email_va=/[\w_|\.]+@[\w]+\.[a-z]/;
+        //     var ph_va=new RegExp("[0-9]{10}");
+        //     var pass_va=new RegExp("^[A-Z][a-z 0-9 A-Z]{9,16}","g");
+        //     if(FirstName.match(Fir_va))
+        //     {
+        //         alert("Hai");
+        //         if(LastName.match(Las_va))
+        //         {
+        //             if(Email.match(email_va))
+        //             {
+        //                 if(phoneNo.match(ph_va))
+        //                 {
+        //                     if(pass.match(pass_va))
+        //                     {
+        //                         if(pass==Conpass)
+        //                         {
+        //                             alert("All fields are correct");
+        //                             valid=true;
+        //                         }
+        //                         else
+        //                         {
+        //                             alert("Password missmatched");
+        //                         }
+        //                     }
+        //                     else
+        //                         {
+        //                             alert("Enter valid Password");
+        //                         }
+        //                 }
+        //                 else
+        //                         {
+        //                             alert("Enter Valid PhoneNumber");
+        //                         }
+        //             }
+        //             else
+        //                         {
+        //                             alert("Enter valid Email address");
+        //                         }
+        //         }
+        //         else
+        //                         {
+        //                             alert("Enter valid Lastname");
+        //                         }
+        //     }
+        //     else
+        //     {
+        //         alert("Enter Valid Firstname");
+        //     }
+        // }
+    </script>
+    </head>
+    <body style="background-image: url(Registration.png); background-size: cover;">
+        <center><br><br><br>
+            <marquee onmouseover="stop()" onmouseout="start()"><h1 style="color: rgb(236, 13, 13);text-decoration: solid;">WelCome To <b>Surya Apartments</b></h1></marquee>
+            <br><br><br><br><br><br><br>
+            
+            <fieldset style="height: auto;width: 500px;">
+                    <form method="post" action="http://localhost/Surya/Registration.php" name="Reg">
+                    <legend><h2 style="color: rgb(42, 7, 139);">Registration</h2></legend>
+                    <table cellspacing="4">
+                        <tr>
+                            <th>Select Profile Photo</th>
+                            <th>:</th>
+                            <td><input type="file" name="Photo" id="Photo" required></td>
+                        </tr>
+                        <tr>
+                            <th>Apartment No</th>
+                            <td> :</td>
+                            <td><input type="text" name="ApNo" required placeholder="Apartment No"></td>
+                        </tr>
+                        <tr>
+                            <th>FirstName</th>
+                            <th>:</th>
+                            <td><input type="text" name="Fname" id="FN" required placeholder="FirstName"></td>
+                        </tr>
+                        <tr>
+                            <th>LastName</th>
+                            <th>:</th>
+                            <td><input type="text" name="LName" id="LN" required placeholder="LastName"></td>
+                        </tr>
+                        <tr>
+                            <th>Date Of Birth</th>
+                            <th>:</th>
+                            <td><input type="date" name="Dat" required></td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <th>:</th>
+                            <td><input type="email" name="Email" id="EM" required placeholder="Email"></td>
+                        </tr>
+                        <tr>
+                            <th>Gender</th>
+                            <th>:</th>
+                            <td><input type="radio" name="Gender" value="Male">Male
+                                <input type="radio" name="Gender" value="Female">Female
+                        </tr>
+                        <tr>
+                            <th>Phone No</th>
+                            <th>:</th>
+                            <td><input type="number" name="Phone" id="PN" placeholder="Phone Number" required></td>
+                        </tr>
+                        <tr>
+                            <th>Password</th>
+                            <th>:</th>
+                            <td><input type="password" name="Pass" id="PW" placeholder="Password" required></td>
+                        </tr>
+                        <tr>
+                            <th>Confirm Password</th>
+                            <th>:</th>
+                            <td><input type="password" name="CPass" id="CPW" placeholder="Confirm Password" required></td>
+                        </tr>
+                        <tr>
+                            <th><button  type="submit" style="background-color: rgb(23, 10, 206);color: rgb(204, 22, 228);">Register</button></th>
+                            <td></td>
+                            <td><button type="reset" style="background-color: red;">Cancel</button></th>
+                        </tr>
+                    </table>
+                    <p>If already have an account <a href="Login.html">Login/SignIn</a></p>
+                </form>
+            </fieldset>
+        
+        </center>
+    </body>
+</html>
